@@ -104,10 +104,7 @@ export default function QuickHomepage()  {
       <section id="contact" className="section">
                 <motion.h2 className="section-title" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>問い合わせ</motion.h2>
                 <div className="contact-info">
-                  <p>株式会社Quick</p>
-                  <p>メールアドレス: tsutsumi@quick.co.jp</p>
-                  <p>電話番号: 090 - 1369 - 9267</p>
-                  <p>いつでも、何についてでも、ご連絡お待ちしております。</p>
+                  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSepninQI5CACHlFn-IpV8_-evc0b_IFxA6GvAopvUuJiRc2OQ/viewform" target="_blank" rel="noopener noreferrer">問い合わせはこちら..</a></p>
                 </div>
       </section>
       </section>
