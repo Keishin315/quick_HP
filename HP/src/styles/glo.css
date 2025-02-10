@@ -14,7 +14,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 5;
 }
 
 .header .container {
@@ -266,4 +266,54 @@ footer {
 .contact-info p {
   margin-bottom: 1rem;
   font-size: 1.125rem;
+}
+
+
+
+/* メンバーセクション */
+.members-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .members-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.member-card {
+  background-color: #f3e6e2;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.member-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.member-role {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.member-description {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+
+/* 背景動画のスタイル */
+.background-video2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  z-index: -2;
 }

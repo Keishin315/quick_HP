@@ -3,8 +3,11 @@ import "../styles/glo.css";
 
 export default function Member() {
   return (
-    <section id="members" className="section">
-      <motion.h2 className="section-title" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>メンバー紹介</motion.h2>
+    <section id="members" className="section background-video">
+      <video autoPlay loop muted className="background-video2">
+          <source src="/Video.mp4" type="video/mp4" />
+      </video>
+      <motion.h2 className="section-title" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>Members</motion.h2>
       <div className="members-grid">
         <motion.div className="member-card" whileHover={{ scale: 1.05 }}>
           <h3 className="member-name">山田 太郎</h3>

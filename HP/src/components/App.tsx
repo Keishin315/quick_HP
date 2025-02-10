@@ -8,9 +8,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 export default function QuickHomepage()  {
   return (
     <Router>
-    <video autoPlay loop muted className="hero-video">
-          <source src="/Video3.mp4" type="video/mp4" />
-    </video>
+    
     <div>
     
       {/* Header */}
@@ -33,7 +31,9 @@ export default function QuickHomepage()  {
       <Route path="/" element={
         <>
       
-
+      <video autoPlay loop muted className="hero-video">
+          <source src="/Video3.mp4" type="video/mp4" />
+      </video>
       {/* Hero Section */}
       
       <section id="home" className="hero">
