@@ -1,11 +1,22 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/Button";
 import "../styles/glo.css";
 import Member from "./Member";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { slide as Menu } from "react-burger-menu";
 
 export default function QuickHomepage()  {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleStateChange = (state:{ isOpen: boolean }) => {
+    setIsOpen(state.isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Router>
     
@@ -15,8 +26,9 @@ export default function QuickHomepage()  {
       <header className="header">
         <div className="container">
           <h1><span className="gothic">Quick Inc.</span></h1>
-          <nav>
+          <nav className="desktop-nav">
             <ul>
+            
               <li><Link to="/">ホーム</Link></li>
               <li><a href="#about"><span className="gothic">Quick</span>について</a></li>
               <li><a href="#services">サービス</a></li>
@@ -25,7 +37,22 @@ export default function QuickHomepage()  {
               <li><a href="#contact">問い合わせ</a></li>
             </ul>
           </nav>
+          <nav className="mobile-nav">
+              <Menu right isOpen={isOpen} onStateChange={handleStateChange}>
+                <ul>
+                  <li><Link to="/" onClick={closeMenu}><p className="sidecolor">ホーム</p></Link></li>
+                  <li><a href="#about" onClick={closeMenu}><p className="sidecolor"><span className="gothic">Quick</span>について</p></a></li>
+                  <li><a href="#services" onClick={closeMenu}><p className="sidecolor">サービス</p></a></li>
+                  <li><a href="#news" onClick={closeMenu}><p className="sidecolor">ニュース</p></a></li>
+                  <li><Link to="/members" onClick={closeMenu}><p className="sidecolor">メンバー</p></Link></li>
+                  <li><a href="#contact" onClick={closeMenu}><p className="sidecolor">問い合わせ</p></a></li>
+                </ul>
+              </Menu>
+          </nav>
+          
+          
         </div>
+        
       </header>
       <Routes>
       <Route path="/" element={
@@ -34,6 +61,11 @@ export default function QuickHomepage()  {
       <video autoPlay loop muted className="hero-video">
           <source src="/Video3.mp4" type="video/mp4" />
       </video>
+
+      <img src="head.png" alt="tsutsumi.jpg" className="hero-photo" />
+
+      
+
       {/* Hero Section */}
       
       <section id="home" className="hero">
@@ -62,6 +94,7 @@ export default function QuickHomepage()  {
         <video autoPlay loop muted className="background-video">
           <source src="/Video7.mp4" type="video/mp4" />
         </video>
+        <img src="/head3.png" alt="head2.png" className="background-photo" />
 
       {/* Service Section */}
       <section id="services" className="section video-background">
