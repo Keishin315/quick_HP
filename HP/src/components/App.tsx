@@ -14,7 +14,7 @@ export default function QuickHomepage()  {
       {/* Header */}
       <header className="header">
         <div className="container">
-          <h1>株式会社<span className="gothic">Quick</span></h1>
+          <h1><span className="gothic">Quick Inc.</span></h1>
           <nav>
             <ul>
               <li><Link to="/">ホーム</Link></li>
@@ -108,17 +108,21 @@ export default function QuickHomepage()  {
                 </div>
       </section>
       </section>
+      <footer>
+        <p>&copy; 2025 株式会社Quick. All Rights Reserved.</p>
+      </footer>
       </>
       } />
       <Route path="/members" element={<Member />} />
       </Routes>
       
-
+      
+      
       {/* Footer */}
-      <footer>
-        <p>&copy; 2025 株式会社Quick. All Rights Reserved.</p>
-      </footer>
-    </div>
+      
+      </div>
+      
+    
     </Router>
     
   );

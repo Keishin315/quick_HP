@@ -268,13 +268,18 @@ footer {
   font-size: 1.125rem;
 }
 
-
+#members {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5),rgba(255, 216, 195, 0.9)); /* 背景色をグラデーションにする */
+}
 
 /* メンバーセクション */
 .members-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  /*flex-direction: column;*/
   gap: 2rem;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
 }
 
 @media (min-width: 768px) {
@@ -284,16 +289,23 @@ footer {
 }
 
 .member-card {
-  background-color: #f3e6e2;
+  background-color: #ffffff;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 500px;
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+  border-radius: 1%;
   text-align: center;
+  align-items: center;
+  background-image: url(Video4.mp4);
 }
 
 .member-name {
   font-size: 1.5rem;
   font-weight: bold;
+}
+.member-info{
+  justify-items: left;
 }
 
 .member-role {
@@ -307,13 +319,47 @@ footer {
 }
 
 
+.member-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 1%;
+  
+}
+
 /* 背景動画のスタイル */
 .background-video2 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height:100%;
   object-fit: cover;
   z-index: -2;
+}
+
+/* メンバーセクション */
+.header-image-container {
+  width: 100%;
+  height: 30vh; /* ウィンドウの縦幅の30% */
+  overflow: hidden;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0); /* 半透明のオーバーレイ */
 }
