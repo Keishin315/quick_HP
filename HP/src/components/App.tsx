@@ -88,7 +88,7 @@ export default function QuickHomepage()  {
       <section id="about" className="section video-background">
         
         <motion.h2 className="section-title" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>About Us</motion.h2>
-        <p className="section-content"><br></br><br></br><br></br>株式会社クイックは、「テクノロジーで医療をつくる」をビジョンに、医療DXを推進するスタートアップです。<br></br><br></br>AI・データ活用・自動化技術を駆使し、医療現場の課題にアプローチし、誰もがより良い医療を享受できる未来をつくります。</p><br></br><br></br><br></br><br></br><br></br><br></br>
+        <p className="section-content"><br></br><br></br><br></br>株式会社クイックは、「テクノロジーで医療をつくる」をビジョンに、医療DXを推進するスタートアップです。<br></br><br></br>AI・データ活用・自動化技術を駆使しながら医療現場の課題にアプローチし、誰もがより良い医療を享受できる未来をつくります。</p><br></br><br></br><br></br><br></br><br></br><br></br>
       </section>
       <section className="section video-background">
         <video autoPlay loop muted className="background-video">
