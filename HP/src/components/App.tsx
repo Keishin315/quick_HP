@@ -82,7 +82,7 @@ export default function QuickHomepage()  {
           >
             <h1 className="hero-title">テクノロジーで医療をつくる。</h1>
             <p className="hero-subtitle">株式会社<span className="gothic">Quick</span>はITの力で医療課題の解決に取り組む筑波大学発スタートアップです。</p>
-            <p className="hero-subtitle">高い開発力と確かな専門性で日本の医療を刷新していきます。</p>
+            <p className="hero-subtitle">全ての人にとって幸せな医療をITとAIの力で実現します。</p>
             <a href="#about"><Button className="button mt-6">- Read more -</Button></a>
           </motion.div>
         </div>
