@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/Button";
 import "../styles/glo.css";
 import Member from "./Member";
+import NewsList from "./NewsList";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 
@@ -25,7 +26,10 @@ export default function QuickHomepage()  {
       {/* Header */}
       <header className="header">
         <div className="container">
-          <h1><span className="gothic">Quick Inc.</span></h1>
+          {/*<h1><span className="gothic">Quick Inc.</span><image></image></h1>*/}
+          <h1>
+              <img src="Quick_photo.PNG" alt="Quick Inc. Logo" className="logo" />
+          </h1>
           <nav className="desktop-nav">
             <ul>
             
@@ -77,8 +81,8 @@ export default function QuickHomepage()  {
             transition={{ duration: 4}}
           >
             <h1 className="hero-title">テクノロジーで医療をつくる。</h1>
-            <p className="hero-subtitle">株式会社<span className="gothic">Quick</span>は、医学生発のスタートアップです。</p>
-            <p className="hero-subtitle">高い開発力によって、DXから医療を刷新していきます。</p>
+            <p className="hero-subtitle">株式会社<span className="gothic">Quick</span>はITの力で医療課題の解決に取り組む筑波大学発スタートアップです。</p>
+            <p className="hero-subtitle">高い開発力と確かな専門性で日本の医療を刷新していきます。</p>
             <a href="#about"><Button className="button mt-6">- Read more -</Button></a>
           </motion.div>
         </div>
@@ -88,7 +92,7 @@ export default function QuickHomepage()  {
       <section id="about" className="section video-background">
         
         <motion.h2 className="section-title" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>About Us</motion.h2>
-        <p className="section-content"><br></br><br></br><br></br>株式会社クイックは、「テクノロジーで医療をつくる」をビジョンに、医療DXを推進するスタートアップです。<br></br><br></br>AI・データ活用・自動化技術を駆使しながら医療現場の課題にアプローチし、誰もがより良い医療を享受できる未来をつくります。</p><br></br><br></br><br></br><br></br><br></br><br></br>
+        <p className="section-content"><br></br><br></br><br></br>株式会社<span className="gothic">Quick</span>は、「テクノロジーで医療をつくる」をビジョンに、医療DXを推進するスタートアップです。<br></br><br></br>AI・データ活用・自動化技術を駆使しながら医療現場の課題にアプローチし、誰もがより良い医療を享受できる未来をつくります。</p><br></br><br></br><br></br><br></br><br></br><br></br>
       </section>
       <section className="section video-background">
         <video autoPlay loop muted className="background-video">
@@ -121,16 +125,17 @@ export default function QuickHomepage()  {
           <motion.h2 className="section-title" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>News</motion.h2>
           <div className="news-grid">
             <motion.div className="news-card" whileHover={{ scale: 1.02 }}>
-              <h3 className="news-title">2025年1月　Why me?ナイスアイデア賞受賞 </h3>
-              <p className="news-description">KBCの主催するWhy me?というビジネスコンテストに参加し、ナイスアイデア賞をいただきました。</p>
-              <img src="/image2.jpg" alt="新サービス発表" className="news-image" />
-            </motion.div>
+                    <h3 className="news-title">2025年2月26日　元アクセンチュア・高島屋の大川秋生氏のAdvisor就任がPRTIMESでリリース</h3>
+                    <p className="news-description">PRTIMESのリンクは<a href="https://prtimes.jp/main/html/rd/p/000000001.000156902.html" target="_blank" rel="noopener noreferrer">こちら</a>。<br></br>大川氏は、アクセンチュア日本法人の急成長を支え、アクセンチュア・テクノロジー・ソリューションズの代表取締役社長を歴任。その後、高島屋では執行役員として企画本部を担当するなど、長年にわたり企業経営や戦略立案に携わってきました。</p>
+                  </motion.div>
             <motion.div className="news-card" whileHover={{ scale: 1.02 }}>
               <h3 className="news-title">2025年1月　イチBizアワードにてトリプル受賞</h3>
               <p className="news-description">地理情報空間を活用したアイデアを競うイチBizアワードで、アイデア部門優秀賞、オーディエンス賞、ドクターヘリ賞の3つをいただきました。</p>
               <img src="/image4.jpg" alt="新サービス発表" className="news-image" />
             </motion.div>
           </div>
+          <br></br>
+          <Link to="/NewsList"><Button className="button mt-6">Newsをもっと見る</Button></Link>
         </div>
       </section>
       {/* Contact Section */}
@@ -147,6 +152,7 @@ export default function QuickHomepage()  {
       </>
       } />
       <Route path="/members" element={<Member />} />
+      <Route path="/NewsList" element={<NewsList />} />
       </Routes>
       
       
