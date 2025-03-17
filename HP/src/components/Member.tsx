@@ -37,7 +37,7 @@ export default function Member() {
           <div className="member-info">
             <h3 className="member-name">丸澤 賢司</h3>
             <p className="member-role">COO</p>
-            <p className="member-description">＜経歴＞<br></br>東京学芸大学附属高校卒業<br></br>筑波大学理工学群物理学類首席卒業<br></br>筑波大学医学群医学類5年<br></br>重症度判定用AI研究開発及び会社方針の策定に従事。<br></br></p>
+            <p className="member-description">＜経歴＞<br></br>東京学芸大学附属高校卒業<br></br>筑波大学理工学群物理学類首席卒業<br></br>筑波大学医学群医学類5年<br></br>重症度判定用AI研究開発を担当。<br></br></p>
           </div>
         </div>
       </div>
