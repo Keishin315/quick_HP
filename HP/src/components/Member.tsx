@@ -15,7 +15,7 @@ export default function Member() {
       <div className="section">
       <div className="members-grid">
         <div className="member-card">
-          <img src="/tomoka.png" alt="準備中" className="member-photo" />
+          <img src="/takeda.jpg" alt="準備中" className="member-photo" />
           <div className="member-info">
             <h3 className="member-name">武田 淳宏</h3>
             <p className="member-role">CEO</p>
@@ -47,7 +47,7 @@ export default function Member() {
           <img src="/ikeda.jpg" alt="準備中" className="member-photo" />
           <div className="member-info">
             <h3 className="member-name">池田有之介</h3>
-            <p className="member-role">技術顧問</p>
+            <p className="member-role">エンジニア</p>
             <p className="member-description">＜経歴＞<br></br>広島大学大学院統合生命科学研究科修士課程 / University of Minnesota  Computer Science<br></br>官民含めた様々な案件の受託開発経験あり。<br></br></p>
           </div>
         </div>
